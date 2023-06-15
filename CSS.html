@@ -1,40 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Trang web của tôi</title>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Chào mừng đến với trang web của tôi</h1>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Dịch vụ</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
-    </nav>
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
 
-    <section>
-        <h2>Giới thiệu</h2>
-        <p>Xin chào! Tôi là người tạo ra trang web này. Đây là nơi tôi chia sẻ thông tin và kiến thức với mọi người.</p>
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
 
-        
-    </section>
+<div class="row">
+  <div class="column side">
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  </div>
+  
+  <div class="column middle">
+    <h2>Main Content</h2>
+    <img src="https://thietkenhadepaau.com/wp-content/uploads/2020/12/biet-thu-vuon-2-tang-768x576.jpg" width="300" alt="m">
+    <img src="https://acihome.com.vn/uploads/17/top-9-mau-nha-cap-4-mai-nhat-dep-tien-nghi1.jpg" width="300" alt="m">
+  </div>
+  
+  <div class="column side">
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  </div>
+</div>
 
-    <section>
-        <h2>Dịch vụ</h2>
-        <ul>
-            <li>Dịch vụ A</li>
-            <li>Dịch vụ B</li>
-            <li>Dịch vụ C</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Bản quyền &copy; 2023 - Trang web của tôi.</p>
-    </footer>
+<div class="footer">
+  <p>Footer</p>
+</div>
+  
 </body>
 </html>
+
+
